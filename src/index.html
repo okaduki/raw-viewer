@@ -1,0 +1,28 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>raw viewer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button id="openFile">Open</button>
+    <br>
+    <div id="image-frame">
+      <canvas id="canvas" width="512px" height="512px"></canvas>
+      <canvas id="canvas-back" width="512" height="512" hidden></canvas>
+    </div>
+    <input type="range" id="imagenum" min="0" max="0" value="0">
+    <span id="imagenum-text">0</span>
+
+    <script src="./index.js"></script>
+
+    <!-- You can also require other files to run in this process -->
+    <!-- <script src="./renderer.js"></script> -->
+  </body>
+</html>
